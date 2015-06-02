@@ -1,7 +1,16 @@
 var http = require("http");
+var path = require("path");
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello!");
-  response.end();
+var server = http.createServer(function(request, response) {
+  var filePath = false;
+
+  if (request.url == '/') {
+    filePath = "public/index.html";
+  } else {
+    filePath = "public" + request.url;
+  }
+
+  var absPath = "./" + filePath;
+  serverWorking(response, absPath);
 }).listen(3000);
+
