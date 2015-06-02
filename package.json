@@ -1,0 +1,9 @@
+{
+	"name" : "HTTP_server",
+	"version" : "0.0.1",
+	"description" : "A simple HTTP sever for the Code Fellows front end developer accelerator",
+	"dependencies" : {
+		"mime" : "~1.2.7"
+	}
+	
+}
