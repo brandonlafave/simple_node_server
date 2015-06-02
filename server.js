@@ -18,7 +18,7 @@ var server = http.createServer(function(request, response) {
 
 function send404(response) {
   response.writeHead(404, {"Content-type" : "text/plain"});
-  response.write("Error 404: resource not found");
+  response.write("Error 404: resource not found. Hit the back button and try another link!");
   response.end();
 }
 
